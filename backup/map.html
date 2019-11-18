@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtYVgwZXMklJGEOyLY__6pdJQXWfo5fEg"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <link rel="stylesheet" href="style.css?v=2" />
+    <!-- <link rel="shortcut icon" href="favicon.png" type="image/png" /> -->
+    <title>Be Snow Sure</title>
+  </head>
+  <body class="map">
+    <div class="loader map" style="display: flex;">
+      <div id="phrase_box">
+        <svg width="100%" height="100%">
+          <defs>
+            <mask
+              id="mask"
+              maskUnits="userSpaceOnUse"
+              maskContentUnits="userSpaceOnUse"
+            >
+              <linearGradient
+                id="linearGradient"
+                gradientUnits="objectBoundingBox"
+                x2="0"
+                y2="1"
+              >
+                <stop stop-color="white" stop-opacity="0" offset="0%" />
+                <stop stop-color="white" stop-opacity="1" offset="30%" />
+                <stop stop-color="white" stop-opacity="1" offset="70%" />
+                <stop stop-color="white" stop-opacity="0" offset="100%" />
+              </linearGradient>
+              <rect width="100%" height="100%" fill="url(#linearGradient)" />
+            </mask>
+          </defs>
+          <g width="100%" height="100%" style="mask: url(#mask);">
+            <g id="phrases"></g>
+          </g>
+        </svg>
+      </div>
+      <div id="footer">
+        <div id="logo">
+          <img src="./img/logo.svg" alt="logo" />
+        </div>
+      </div>
+    </div>
+    <div class="loader default" style="display: none;">
+      <div class="e-loadholder">
+        <div class="m-loader">
+          <span class="e-text">Loading</span>
+        </div>
+      </div>
+      <div id="particleCanvas-Blue"></div>
+      <div id="particleCanvas-White"></div>
+    </div>
+
+    <div id="barba-wrapper">
+      <div class="barba-container">
+        <!-- preloader -->
+
+        <!-- container -->
+        <div class="container">
+          <div class="wrapper">
+            <div class="header">
+              <a href="/" class="logo">
+                <img src="./img/logo.svg" alt="logo" />
+              </a>
+              <div class="mobile-menu"></div>
+            </div>
+            <div class="content">
+              <div class="hidden"></div>
+              <div class="list-of-locations">
+                <div class="for-mobile">
+                  <div class="show">Show</div>
+                </div>
+
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <div class="location " id="local-1" data-transform>
+                        <span class="number">Number 1</span>
+                        <div class="location__content">
+                          <div class="top">
+                            <h3 class="name">
+                              Les Deux Alpes <span>France</span>
+                            </h3>
+                            <div class="icon">
+                              <img src="./img/share.svg" alt="" />
+                            </div>
+                          </div>
+                          <div class="more-details">
+                            <ul class="more-detail__left">
+                              <li class="property">
+                                <span class="property__text"
+                                  >Estimated powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow(5cm+), limited sun, any wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">4-5</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >EST. blue bird powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow (5cm+), mostly sunny, light wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">0-1</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >Total snowfall to date (cm)</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="The accumulative seasonal snowfall up until this week based on the average snowfalls over an 11 year period."
+                                ></span>
+                                <span class="property__number">1042</span>
+                              </li>
+                            </ul>
+                            <div class="more-detail__right">
+                              <div class="graph">
+                                <span class="graph__name"
+                                  >Estimated Weekly Snowfall</span
+                                >
+                                <div class="graph__info">
+                                  <span
+                                    class="column one"
+                                    style="max-height: 78%; "
+                                    ><i>78cm</i></span
+                                  >
+                                  <span
+                                    class="column two"
+                                    style="max-height: 100%; "
+                                    ><i>100cm</i></span
+                                  >
+                                  <span
+                                    class="column three"
+                                    style="max-height: 68%; "
+                                    ><i>68cm</i></span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location " id="local-2" data-transform>
+                        <span class="number">Number 1</span>
+                        <div class="location__content">
+                          <div class="top">
+                            <h3 class="name">
+                              Les Deux Alpes <span>France</span>
+                            </h3>
+                            <div class="icon">
+                              <img src="./img/share.svg" alt="" />
+                            </div>
+                          </div>
+                          <div class="more-details">
+                            <ul class="more-detail__left">
+                              <li class="property">
+                                <span class="property__text"
+                                  >Estimated powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow(5cm+), limited sun, any wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">4-5</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >EST. blue bird powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow (5cm+), mostly sunny, light wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">0-1</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >Total snowfall to date (cm)</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="The accumulative seasonal snowfall up until this week based on the average snowfalls over an 11 year period."
+                                ></span>
+                                <span class="property__number">1042</span>
+                              </li>
+                            </ul>
+                            <div class="more-detail__right">
+                              <div class="graph">
+                                <span class="graph__name"
+                                  >Estimated Weekly Snowfall</span
+                                >
+                                <div class="graph__info">
+                                  <span
+                                    class="column one"
+                                    style="max-height: 78%; "
+                                    ><i>78cm</i></span
+                                  >
+                                  <span
+                                    class="column two"
+                                    style="max-height: 100%; "
+                                    ><i>100cm</i></span
+                                  >
+                                  <span
+                                    class="column three"
+                                    style="max-height: 68%; "
+                                    ><i>68cm</i></span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location " id="local-3" data-transform>
+                        <span class="number">Number 1</span>
+                        <div class="location__content">
+                          <div class="top">
+                            <h3 class="name">
+                              Les Deux Alpes <span>France</span>
+                            </h3>
+                            <div class="icon">
+                              <img src="./img/share.svg" alt="" />
+                            </div>
+                          </div>
+                          <div class="more-details">
+                            <ul class="more-detail__left">
+                              <li class="property">
+                                <span class="property__text"
+                                  >Estimated powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow(5cm+), limited sun, any wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">4-5</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >EST. blue bird powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow (5cm+), mostly sunny, light wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">0-1</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >Total snowfall to date (cm)</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="The accumulative seasonal snowfall up until this week based on the average snowfalls over an 11 year period."
+                                ></span>
+                                <span class="property__number">1042</span>
+                              </li>
+                            </ul>
+                            <div class="more-detail__right">
+                              <div class="graph">
+                                <span class="graph__name"
+                                  >Estimated Weekly Snowfall</span
+                                >
+                                <div class="graph__info">
+                                  <span
+                                    class="column one"
+                                    style="max-height: 78%; "
+                                    ><i>78cm</i></span
+                                  >
+                                  <span
+                                    class="column two"
+                                    style="max-height: 100%; "
+                                    ><i>100cm</i></span
+                                  >
+                                  <span
+                                    class="column three"
+                                    style="max-height: 68%; "
+                                    ><i>68cm</i></span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location " id="local-4" data-transform>
+                        <span class="number">Number 1</span>
+                        <div class="location__content">
+                          <div class="top">
+                            <h3 class="name">
+                              Les Deux Alpes <span>France</span>
+                            </h3>
+                            <div class="icon">
+                              <img src="./img/share.svg" alt="" />
+                            </div>
+                          </div>
+                          <div class="more-details">
+                            <ul class="more-detail__left">
+                              <li class="property">
+                                <span class="property__text"
+                                  >Estimated powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow(5cm+), limited sun, any wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">4-5</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >EST. blue bird powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow (5cm+), mostly sunny, light wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">0-1</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >Total snowfall to date (cm)</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="The accumulative seasonal snowfall up until this week based on the average snowfalls over an 11 year period."
+                                ></span>
+                                <span class="property__number">1042</span>
+                              </li>
+                            </ul>
+                            <div class="more-detail__right">
+                              <div class="graph">
+                                <span class="graph__name"
+                                  >Estimated Weekly Snowfall</span
+                                >
+                                <div class="graph__info">
+                                  <span
+                                    class="column one"
+                                    style="max-height: 78%; "
+                                    ><i>78cm</i></span
+                                  >
+                                  <span
+                                    class="column two"
+                                    style="max-height: 100%; "
+                                    ><i>100cm</i></span
+                                  >
+                                  <span
+                                    class="column three"
+                                    style="max-height: 68%; "
+                                    ><i>68cm</i></span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location " id="local-5" data-transform>
+                        <span class="number">Number 1</span>
+                        <div class="location__content">
+                          <div class="top">
+                            <h3 class="name">
+                              Les Deux Alpes <span>France</span>
+                            </h3>
+                            <div class="icon">
+                              <img src="./img/share.svg" alt="" />
+                            </div>
+                          </div>
+                          <div class="more-details">
+                            <ul class="more-detail__left">
+                              <li class="property">
+                                <span class="property__text"
+                                  >Estimated powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow(5cm+), limited sun, any wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">4-5</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >EST. blue bird powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow (5cm+), mostly sunny, light wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">0-1</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >Total snowfall to date (cm)</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="The accumulative seasonal snowfall up until this week based on the average snowfalls over an 11 year period."
+                                ></span>
+                                <span class="property__number">1042</span>
+                              </li>
+                            </ul>
+                            <div class="more-detail__right">
+                              <div class="graph">
+                                <span class="graph__name"
+                                  >Estimated Weekly Snowfall</span
+                                >
+                                <div class="graph__info">
+                                  <span
+                                    class="column one"
+                                    style="max-height: 78%; "
+                                    ><i>78cm</i></span
+                                  >
+                                  <span
+                                    class="column two"
+                                    style="max-height: 100%; "
+                                    ><i>100cm</i></span
+                                  >
+                                  <span
+                                    class="column three"
+                                    style="max-height: 68%; "
+                                    ><i>68cm</i></span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location " id="local-6" data-transform>
+                        <span class="number">Number 1</span>
+                        <div class="location__content">
+                          <div class="top">
+                            <h3 class="name">
+                              Les Deux Alpes <span>France</span>
+                            </h3>
+                            <div class="icon">
+                              <img src="./img/share.svg" alt="" />
+                            </div>
+                          </div>
+                          <div class="more-details">
+                            <ul class="more-detail__left">
+                              <li class="property">
+                                <span class="property__text"
+                                  >Estimated powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow(5cm+), limited sun, any wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">4-5</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >EST. blue bird powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow (5cm+), mostly sunny, light wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">0-1</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >Total snowfall to date (cm)</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="The accumulative seasonal snowfall up until this week based on the average snowfalls over an 11 year period."
+                                ></span>
+                                <span class="property__number">1042</span>
+                              </li>
+                            </ul>
+                            <div class="more-detail__right">
+                              <div class="graph">
+                                <span class="graph__name"
+                                  >Estimated Weekly Snowfall</span
+                                >
+                                <div class="graph__info">
+                                  <span
+                                    class="column one"
+                                    style="max-height: 78%; "
+                                    ><i>78cm</i></span
+                                  >
+                                  <span
+                                    class="column two"
+                                    style="max-height: 100%; "
+                                    ><i>100cm</i></span
+                                  >
+                                  <span
+                                    class="column three"
+                                    style="max-height: 68%; "
+                                    ><i>68cm</i></span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location " id="local-7" data-transform>
+                        <span class="number">Number 1</span>
+                        <div class="location__content">
+                          <div class="top">
+                            <h3 class="name">
+                              Les Deux Alpes <span>France</span>
+                            </h3>
+                            <div class="icon">
+                              <img src="./img/share.svg" alt="" />
+                            </div>
+                          </div>
+                          <div class="more-details">
+                            <ul class="more-detail__left">
+                              <li class="property">
+                                <span class="property__text"
+                                  >Estimated powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow(5cm+), limited sun, any wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">4-5</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >EST. blue bird powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow (5cm+), mostly sunny, light wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">0-1</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >Total snowfall to date (cm)</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="The accumulative seasonal snowfall up until this week based on the average snowfalls over an 11 year period."
+                                ></span>
+                                <span class="property__number">1042</span>
+                              </li>
+                            </ul>
+                            <div class="more-detail__right">
+                              <div class="graph">
+                                <span class="graph__name"
+                                  >Estimated Weekly Snowfall</span
+                                >
+                                <div class="graph__info">
+                                  <span
+                                    class="column one"
+                                    style="max-height: 78%; "
+                                    ><i>78cm</i></span
+                                  >
+                                  <span
+                                    class="column two"
+                                    style="max-height: 100%; "
+                                    ><i>100cm</i></span
+                                  >
+                                  <span
+                                    class="column three"
+                                    style="max-height: 68%; "
+                                    ><i>68cm</i></span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location " id="local-8" data-transform>
+                        <span class="number">Number 1</span>
+                        <div class="location__content">
+                          <div class="top">
+                            <h3 class="name">
+                              Les Deux Alpes <span>France</span>
+                            </h3>
+                            <div class="icon">
+                              <img src="./img/share.svg" alt="" />
+                            </div>
+                          </div>
+                          <div class="more-details">
+                            <ul class="more-detail__left">
+                              <li class="property">
+                                <span class="property__text"
+                                  >Estimated powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow(5cm+), limited sun, any wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">4-5</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >EST. blue bird powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow (5cm+), mostly sunny, light wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">0-1</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >Total snowfall to date (cm)</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="The accumulative seasonal snowfall up until this week based on the average snowfalls over an 11 year period."
+                                ></span>
+                                <span class="property__number">1042</span>
+                              </li>
+                            </ul>
+                            <div class="more-detail__right">
+                              <div class="graph">
+                                <span class="graph__name"
+                                  >Estimated Weekly Snowfall</span
+                                >
+                                <div class="graph__info">
+                                  <span
+                                    class="column one"
+                                    style="max-height: 78%; "
+                                    ><i>78cm</i></span
+                                  >
+                                  <span
+                                    class="column two"
+                                    style="max-height: 100%; "
+                                    ><i>100cm</i></span
+                                  >
+                                  <span
+                                    class="column three"
+                                    style="max-height: 68%; "
+                                    ><i>68cm</i></span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="location " id="local-9" data-transform>
+                        <span class="number">Number 1</span>
+                        <div class="location__content">
+                          <div class="top">
+                            <h3 class="name">
+                              Les Deux Alpes <span>France</span>
+                            </h3>
+                            <div class="icon">
+                              <img src="./img/share.svg" alt="" />
+                            </div>
+                          </div>
+                          <div class="more-details">
+                            <ul class="more-detail__left">
+                              <li class="property">
+                                <span class="property__text"
+                                  >Estimated powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow(5cm+), limited sun, any wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">4-5</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >EST. blue bird powder days</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="Defined as fresh snow (5cm+), mostly sunny, light wind. Data taken from mid mountain altitude using the average of an 11 years period."
+                                ></span>
+                                <span class="property__number">0-1</span>
+                              </li>
+                              <li class="property">
+                                <span class="property__text"
+                                  >Total snowfall to date (cm)</span
+                                >
+                                <span
+                                  class="property__tooltip"
+                                  data-tooltip="The accumulative seasonal snowfall up until this week based on the average snowfalls over an 11 year period."
+                                ></span>
+                                <span class="property__number">1042</span>
+                              </li>
+                            </ul>
+                            <div class="more-detail__right">
+                              <div class="graph">
+                                <span class="graph__name"
+                                  >Estimated Weekly Snowfall</span
+                                >
+                                <div class="graph__info">
+                                  <span
+                                    class="column one"
+                                    style="max-height: 78%; "
+                                    ><i>78cm</i></span
+                                  >
+                                  <span
+                                    class="column two"
+                                    style="max-height: 100%; "
+                                    ><i>100cm</i></span
+                                  >
+                                  <span
+                                    class="column three"
+                                    style="max-height: 68%; "
+                                    ><i>68cm</i></span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- form -->
+              <form action="/map.html" id="my-resort">
+                <div class="top">
+                  <div class="choose-block">
+                    <label for="">Week of Holiday</label>
+                    <select id="departure-date">
+                      <option value="hide">Please Select</option>
+                      <optgroup label="November">
+                        <option value="1">1/11/19 - 7/11/19</option>
+                        <option value="2">16/11/19 - 23/11/19</option>
+                        <option value="3">23/11/19 - 30/11/19</option>
+                      </optgroup>
+                      <optgroup label="December">
+                        <option value="4">10/11/19 - 17/11/19</option>
+                        <option value="5">11/12/20 - 18/12/20</option>
+                        <option value="7">10/11/19 - 17/11/19</option>
+                        <option value="8">11/12/20 - 18/12/20</option>
+                      </optgroup>
+                      <optgroup label="March">
+                        <option value="9">10/11/19 - 17/11/19</option>
+                        <option value="10">11/12/20 - 18/12/20</option>
+                        <option value="11">10/11/19 - 17/11/19</option>
+                        <option value="12">11/12/20 - 18/12/20</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div class="choose-block">
+                    <label for="">Destination</label>
+                    <div class="select">please select</div>
+
+                    <div class="choose-checkbox">
+                      <div class="choose-checkbox__top">
+                        <input
+                          type="checkbox"
+                          name="category"
+                          id="all-countries"
+                          class="input-checkbox"
+                        />
+                        <label for="all-countries" class="for-checkbox bold"
+                          >all countries</label
+                        >
+                      </div>
+                      <div class="choose-checkbox__bottom">
+                        <div class="first column">
+                          <div class="column__top">
+                            <input
+                              type="checkbox"
+                              name="category"
+                              id="australasia"
+                              class="input-checkbox"
+                            />
+                            <label for="australasia" class="for-checkbox bold"
+                              >australasia</label
+                            >
+                          </div>
+                          <ul>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="australia"
+                                class="input-checkbox"
+                              />
+                              <label for="australia" class="for-checkbox"
+                                >Australia</label
+                              >
+                            </li>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="new-zealand"
+                                class="input-checkbox"
+                              />
+                              <label for="new-zealand" class="for-checkbox"
+                                >New Zealand</label
+                              >
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="second column">
+                          <div class="column__top">
+                            <input
+                              type="checkbox"
+                              name="category"
+                              id="europe"
+                              class="input-checkbox"
+                            />
+                            <label for="europe" class="for-checkbox bold"
+                              >europe</label
+                            >
+                          </div>
+                          <ul>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="austria"
+                                class="input-checkbox"
+                              />
+                              <label for="austria" class="for-checkbox"
+                                >Austria</label
+                              >
+                            </li>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="france"
+                                class="input-checkbox"
+                              />
+                              <label for="france" class="for-checkbox"
+                                >france</label
+                              >
+                            </li>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="germany"
+                                class="input-checkbox"
+                              />
+                              <label for="germany" class="for-checkbox"
+                                >germany</label
+                              >
+                            </li>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="italy"
+                                class="input-checkbox"
+                              />
+                              <label for="italy" class="for-checkbox"
+                                >italy</label
+                              >
+                            </li>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="spain"
+                                class="input-checkbox"
+                              />
+                              <label for="spain" class="for-checkbox"
+                                >spain</label
+                              >
+                            </li>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="sitzerland"
+                                class="input-checkbox"
+                              />
+                              <label for="sitzerland" class="for-checkbox"
+                                >sitzerland</label
+                              >
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="third column">
+                          <div class="column__top">
+                            <input
+                              type="checkbox"
+                              name="category"
+                              id="north-america"
+                              class="input-checkbox"
+                            />
+                            <label for="north-america" class="for-checkbox bold"
+                              >north america</label
+                            >
+                          </div>
+                          <ul>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="canada"
+                                class="input-checkbox"
+                              />
+                              <label for="canada" class="for-checkbox"
+                                >canada</label
+                              >
+                            </li>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="usa"
+                                class="input-checkbox"
+                              />
+                              <label for="usa" class="for-checkbox">USA</label>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="fourth column">
+                          <div class="column__top">
+                            <input
+                              type="checkbox"
+                              name="category"
+                              id="south-america"
+                              class="input-checkbox"
+                            />
+                            <label for="south-america" class="for-checkbox bold"
+                              >south america</label
+                            >
+                          </div>
+                          <ul>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="argentina"
+                                class="input-checkbox"
+                              />
+                              <label for="argentina" class="for-checkbox"
+                                >Argentina</label
+                              >
+                            </li>
+                            <li>
+                              <input
+                                type="checkbox"
+                                name="category"
+                                id="chile"
+                                class="input-checkbox"
+                              />
+                              <label for="chile" class="for-checkbox"
+                                >Chile</label
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="/" class="button hover">
+                    <span></span>
+                    <text>discover my resort</text>
+                  </a>
+                  <!-- <button class="button hover">
+                    <span></span>
+                    <text>discover my resort</text>
+                  </button> -->
+                </div>
+                <input type="checkbox" id="school-holidays" name="check" />
+                <label for="school-holidays">Avoid local school holidays</label>
+              </form>
+            </div>
+
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.1/smooth-scrollbar.js"></script>
+    <script src="./js/selectize.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script>
+      function MapOption() {
+        // DATA location
+        let locationData = [
+          [44.52031, 7.873723, 0, "local-1"],
+          [48, 7.873723, 1, "local-2"],
+          [48, 120, 2, "local-3"],
+          [47, 120, 3, "local-4"],
+          [46, 80, 4, "local-5"],
+          [45, 70, 5, "local-6"],
+          [44, 50, 6, "local-7"],
+          [43, 14, 7, "local-8"],
+          [42, 12, 8, "local-9"]
+        ];
+
+        const myMap = document.getElementById("map");
+        const centerMap = new google.maps.LatLng(44, 7);
+        const maxZoomIn = 6;
+        const maxZoomOut = 3;
+        const timeOut = 1000;
+        const colorOne = "#00e1d8";
+
+        // style MARKER
+        const templateMarker = [
+          '<?xml version="1.0"?>',
+          '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">',
+          "<g>",
+          "<g>",
+          '<path fill="{{ colorOne }}" fill-opacity=".7" d="M6 12A6 6 0 1 0 6 0a6 6 0 0 0 0 12z"/>',
+          "</g>",
+          "<g>",
+          '<path fill="#fff" d="M6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>',
+          "</g>",
+          "</g>",
+          "</svg>"
+        ].join("\n");
+
+        let zoomedIn = false;
+        let marker;
+        let svg = templateMarker.replace("{{ colorOne }}", colorOne);
+
+        // MAP OPTION
+        const options = {
+          center: centerMap,
+          // center: points,
+          zoom: 3,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          disableDefaultUI: true,
+          scrollwheel: 0,
+          styles: [
+            {
+              featureType: "all",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "on"
+                }
+              ]
+            },
+            {
+              featureType: "administrative",
+              elementType: "geometry",
+              stylers: [
+                {
+                  visibility: "on"
+                }
+              ]
+            },
+            {
+              featureType: "administrative",
+              elementType: "geometry.fill",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative",
+              elementType: "geometry.stroke",
+              stylers: [
+                {
+                  visibility: "on"
+                },
+                {
+                  color: "#00e1d8"
+                },
+                {
+                  weight: "1"
+                },
+                {
+                  gamma: "1.00"
+                }
+              ]
+            },
+            {
+              featureType: "administrative",
+              elementType: "labels",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative",
+              elementType: "labels.text",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative",
+              elementType: "labels.text.stroke",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative",
+              elementType: "labels.icon",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.country",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "on"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.country",
+              elementType: "geometry",
+              stylers: [
+                {
+                  visibility: "on"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.country",
+              elementType: "labels",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.country",
+              elementType: "labels.text",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.province",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "on"
+                },
+                {
+                  weight: "0.48"
+                },
+                {
+                  gamma: "1.00"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.province",
+              elementType: "labels.text",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.neighborhood",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.neighborhood",
+              elementType: "geometry",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.neighborhood",
+              elementType: "geometry.fill",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.neighborhood",
+              elementType: "geometry.stroke",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.neighborhood",
+              elementType: "labels",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.neighborhood",
+              elementType: "labels.text",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.neighborhood",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.neighborhood",
+              elementType: "labels.text.stroke",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "administrative.land_parcel",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "landscape",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "landscape",
+              elementType: "geometry.fill",
+              stylers: [
+                {
+                  visibility: "on"
+                },
+                {
+                  color: "#262c30"
+                }
+              ]
+            },
+            {
+              featureType: "road",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "on"
+                }
+              ]
+            },
+            {
+              featureType: "road",
+              elementType: "geometry",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "road",
+              elementType: "labels",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "road",
+              elementType: "labels.text",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "transit",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "on"
+                }
+              ]
+            },
+            {
+              featureType: "transit",
+              elementType: "geometry",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "transit",
+              elementType: "labels",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "transit.station",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "on"
+                }
+              ]
+            },
+            {
+              featureType: "transit.station",
+              elementType: "geometry",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "transit.station",
+              elementType: "labels",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "water",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "on"
+                }
+              ]
+            },
+            {
+              featureType: "water",
+              elementType: "geometry",
+              stylers: [
+                {
+                  visibility: "on"
+                }
+              ]
+            },
+            {
+              featureType: "water",
+              elementType: "geometry.fill",
+              stylers: [
+                {
+                  visibility: "on"
+                },
+                {
+                  color: "#020f19"
+                }
+              ]
+            },
+            {
+              featureType: "water",
+              elementType: "geometry.stroke",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "water",
+              elementType: "labels",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "water",
+              elementType: "labels.text",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "water",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "water",
+              elementType: "labels.text.stroke",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            },
+            {
+              featureType: "water",
+              elementType: "labels.icon",
+              stylers: [
+                {
+                  visibility: "off"
+                }
+              ]
+            }
+          ]
+        };
+        // Create the Map
+        map = new google.maps.Map(myMap, options);
+
+        let myoverlay = new google.maps.OverlayView();
+
+        myoverlay.draw = function() {
+          this.getPanes().markerLayer.id = "markerLayer";
+        };
+        myoverlay.setMap(map);
+
+        let infowindow = new google.maps.InfoWindow({});
+
+        // SCROLL - ZOOM map
+        // myMap.addEventListener("wheel", function(event) {
+        //   if (event.deltaY && event.deltaY < 0) {
+        //     map.setZoom(map.getZoom() + 1);
+        //   } else {
+        //     map.setZoom(map.getZoom() - 1);
+        //   }
+        //   event.preventDefault();
+        // });
+
+        var panPath = []; // An array of points the current panning action will use
+        var panQueue = []; // An array of subsequent panTo actions to take
+        var STEPS = 50; // The number of steps that each panTo action will undergo
+
+        for (let i = 0; i < locationData.length; i++) {
+          let thisPin = locationData[i];
+
+          let myLatLng = new google.maps.LatLng(thisPin[0], thisPin[1]);
+
+          function panTo(newLat, newLng) {
+            if (panPath.length > 0) {
+              // We are already panning...queue this up for next move
+              panQueue.push([newLat, newLng]);
+            } else {
+              // Lets compute the points we'll use
+              panPath.push("LAZY SYNCRONIZED LOCK"); // make length non-zero - 'release' this before calling setTimeout
+              var curLat = map.getCenter().lat();
+              var curLng = map.getCenter().lng();
+              var dLat = (newLat - curLat) / STEPS;
+              var dLng = (newLng - curLng) / STEPS;
+
+              for (var i = 0; i < STEPS; i++) {
+                panPath.push([curLat + dLat * i, curLng + dLng * i]);
+              }
+              panPath.push([newLat, newLng]);
+              panPath.shift(); // LAZY SYNCRONIZED LOCK
+              setTimeout(doPan, 20);
+            }
+          }
+
+          function doPan() {
+            var next = panPath.shift();
+            if (next != null) {
+              // Continue our current pan action
+              map.panTo(new google.maps.LatLng(next[0], next[1]));
+              setTimeout(doPan, 20);
+            } else {
+              // We are finished with this pan - check if there are any queue'd up locations to pan to
+              var queued = panQueue.shift();
+              if (queued != null) {
+                panTo(queued[0], queued[1]);
+              }
+            }
+          }
+
+          // let easingAnimator = EasingAnimator.makeFromCallback(function(
+          //   myLatLng
+          // ) {
+
+          // });
+
+          // let easingAnimator = EasingAnimator.makeFromCallback(function(
+          //   myLatLng
+          // ) {
+          //   map.setCenter(myLatLng);
+          // });
+
+          marker = new google.maps.Marker({
+            map: map,
+            position: myLatLng,
+            icon: {
+              url: "data:image/svg+xml;charset=UTF-8;base64," + btoa(svg),
+              scaledSize: new google.maps.Size(12, 12)
+            },
+            optimized: false,
+            draggable: false
+            // title: locationData.length.toString()
+          });
+
+          // let content = thisPin[4];
+
+          // google.maps.event.addListener(
+          //   marker,
+          //   "click",
+          //   (function(marker, content, infowindow) {
+          //     return function() {
+          //       infowindow.setContent(content);
+          //       infowindow.open(map, marker);
+          //     };
+          //   })(marker, content, infowindow)
+          // );
+
+          (function(_thisPin, _marker) {
+            let timeoutId;
+
+            $("#" + _thisPin[3]).on("mouseenter", function(e) {
+              let thisTitle = Number(_thisPin[2]);
+
+              if (e.currentTarget) {
+                $("#markerLayer img")
+                  .eq(thisTitle)
+                  .css("animation", "pulse 1.5s infinite ease-out");
+
+                $("#" + _thisPin[3]).hover(
+                  function() {
+                    if (!timeoutId) {
+                      timeoutId = window.setTimeout(function() {
+                        timeoutId = null;
+                        $("#" + _thisPin[3]).addClass("show");
+                        panTo(_thisPin[0], _thisPin[1]);
+                      }, 1000);
+                    }
+                  },
+                  function() {
+                    if (timeoutId) {
+                      window.clearTimeout(timeoutId);
+                      timeoutId = null;
+                    } else {
+                      $("#" + _thisPin[3]).removeClass("show");
+                    }
+                  }
+                );
+                // map.panTo(_marker.getPosition());
+                // if (!zoomedIn) {
+                //   smoothZoom(map, maxZoomIn, map.getZoom(_marker), true);
+                //   zoomedIn = true;
+                // } else {
+                //   smoothZoom(map, maxZoomOut, map.getZoom(_marker), false);
+                //   zoomedIn = false;
+                // }
+              }
+            });
+
+            $("#" + _thisPin[3]).on("click", function(e) {
+              // map.slowPanTo(_marker.getPosition()); // set map center to marker position
+              panTo(_thisPin[0], _thisPin[1]);
+
+              if (e.currentTarget) {
+                if (!timeoutId) {
+                  timeoutId = window.setTimeout(function() {
+                    timeoutId = null;
+                    // animateMapZoomTo(map, 6);
+                  }, 1000);
+                } else if (timeoutId) {
+                  window.clearTimeout(timeoutId);
+                  timeoutId = null;
+                }
+              }
+            });
+
+            $("#" + _thisPin[3]).bind("touchenter", function(e) {
+              // map.slowPanTo(_marker.getPosition()); // set map center to marker position
+              animateMapZoomTo(map, 3);
+              panTo(_thisPin[0], _thisPin[1]);
+            });
+
+            $("#" + _thisPin[3]).on("mouseleave", function(e) {
+              // panTo(null, null);
+              setTimeout(() => {
+                if (e.currentTarget) {
+                  animateMapZoomTo(map, 3);
+                }
+              }, 1000);
+
+              $("#markerLayer img").css("animation", "");
+            });
+          })(thisPin, marker);
+
+          function animateMapZoomTo(map, targetZoom) {
+            let currentZoom = arguments[2] || map.getZoom();
+            if (currentZoom != targetZoom) {
+              google.maps.event.addListenerOnce(map, "zoom_changed", function(
+                event
+              ) {
+                animateMapZoomTo(
+                  map,
+                  targetZoom,
+                  currentZoom + (targetZoom > currentZoom ? 1 : -1)
+                );
+              });
+              setTimeout(function() {
+                map.setZoom(currentZoom);
+              }, 80);
+            }
+          }
+        }
+      }
+
+      function initMap() {
+        MapOption();
+      }
+      // function fixZindex() {
+      //   let elements = document.getElementsByClassName("navigation");
+      //   if (elements.length > 0) {
+      //     elements[0].style.zIndex = 0;
+      //   }
+      // }
+
+      // window.addEventListener("scroll", function() {
+      //   let elements = document.getElementsByClassName("navigation");
+      //   if (elements.length > 0) {
+      //     elements[0].style.zIndex = 5000;
+      //   }
+      // });
+
+      google.maps.event.addDomListener(window, "load", initMap);
+    </script>
+    <script>
+      // blur for menu
+      function blurForMenu() {
+        let logoBlur = document.querySelector(".header a");
+        let mapBlur = document.getElementById("map");
+        let listBlur = document.querySelector(".list-of-locations");
+        let hidden = document.querySelector(".hidden");
+
+        let butonMenu = document.querySelector(".mobile-menu");
+        let formForMenu = document.getElementById("my-resort");
+
+        butonMenu.addEventListener("click", () => {
+          formForMenu.classList.toggle("is-active");
+          butonMenu.classList.toggle("is-active");
+          hidden.classList.toggle("is-active");
+          logoBlur.classList.toggle("blur");
+          mapBlur.classList.toggle("blur");
+          listBlur.classList.toggle("blur");
+        });
+      }
+      blurForMenu();
+    </script>
+    <!-- LOADER -->
+    <script>
+      let checkmarkIdPrefix = "loadingCheckSVG-";
+      let checkmarkCircleIdPrefix = "loadingCheckCircleSVG-";
+      let verticalSpacing = 50;
+
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+          let temp = array[i];
+          array[i] = array[j];
+          array[j] = temp;
+        }
+        return array;
+      }
+
+      function createSVG(tag, properties, opt_children) {
+        let newElement = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          tag
+        );
+        for (prop in properties) {
+          newElement.setAttribute(prop, properties[prop]);
+        }
+        if (opt_children) {
+          opt_children.forEach(function(child) {
+            newElement.appendChild(child);
+          });
+        }
+        return newElement;
+      }
+
+      function createPhraseSvg(phrase, yOffset) {
+        let text = createSVG("text", {
+          fill: "white",
+          x: 50,
+          y: yOffset,
+          "font-size": 18,
+          "font-family": "Arial"
+        });
+        text.appendChild(document.createTextNode(phrase + "..."));
+        return text;
+      }
+      function createCheckSvg(yOffset, index) {
+        let check = createSVG("polygon", {
+          points:
+            "21.661,7.643 13.396,19.328 9.429,15.361 7.075,17.714 13.745,24.384 24.345,9.708 ",
+          fill: "rgba(255,255,255,1)",
+          id: checkmarkIdPrefix + index
+        });
+        let circle_outline = createSVG("path", {
+          d:
+            "M16,0C7.163,0,0,7.163,0,16s7.163,16,16,16s16-7.163,16-16S24.837,0,16,0z M16,30C8.28,30,2,23.72,2,16C2,8.28,8.28,2,16,2 c7.72,0,14,6.28,14,14C30,23.72,23.72,30,16,30z",
+          fill: "white"
+        });
+        let circle = createSVG("circle", {
+          id: checkmarkCircleIdPrefix + index,
+          fill: "rgba(255,255,255,0)",
+          cx: 16,
+          cy: 16,
+          r: 15
+        });
+        let group = createSVG(
+          "g",
+          {
+            transform: "translate(10 " + (yOffset - 20) + ") scale(.9)"
+          },
+          [circle, check, circle_outline]
+        );
+        return group;
+      }
+
+      function addPhrasesToDocument(phrases) {
+        phrases.forEach(function(phrase, index) {
+          let yOffset = 30 + verticalSpacing * index;
+          document
+            .getElementById("phrases")
+            .appendChild(createPhraseSvg(phrase, yOffset));
+          document
+            .getElementById("phrases")
+            .appendChild(createCheckSvg(yOffset, index));
+        });
+      }
+
+      function easeInOut(t) {
+        let period = 200;
+        return (Math.sin(t / period + 100) + 1) / 2;
+      }
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+        let phrases = shuffleArray([
+          "Initiating Map Experience",
+          "Analysing Snowfall Data",
+          "Checking Local Holidays",
+          "Locating Ski Resorts",
+          "Initiating Map Experience",
+          "Analysing Snowfall Data",
+          "Checking Local Holidays",
+          "Locating Ski Resorts",
+          "Initiating Map Experience",
+          "Analysing Snowfall Data",
+          "Checking Local Holidays",
+          "Locating Ski Resorts"
+        ]);
+        addPhrasesToDocument(phrases);
+        let start_time = new Date().getTime();
+        let upward_moving_group = document.getElementById("phrases");
+        upward_moving_group.currentY = 0;
+        let checks = phrases.map(function(_, i) {
+          return {
+            check: document.getElementById(checkmarkIdPrefix + i),
+            circle: document.getElementById(checkmarkCircleIdPrefix + i)
+          };
+        });
+        function animateLoading() {
+          let now = new Date().getTime();
+          upward_moving_group.setAttribute(
+            "transform",
+            "translate(0 " + upward_moving_group.currentY + ")"
+          );
+          upward_moving_group.currentY -= 1.35 * easeInOut(now);
+          checks.forEach(function(check, i) {
+            let color_change_boundary =
+              -i * verticalSpacing + verticalSpacing + 15;
+            if (upward_moving_group.currentY < color_change_boundary) {
+              let alpha = Math.max(
+                Math.min(
+                  1 -
+                    (upward_moving_group.currentY -
+                      color_change_boundary +
+                      15) /
+                      30,
+                  1
+                ),
+                0
+              );
+              check.circle.setAttribute(
+                "fill",
+                "rgba(255, 255, 255, " + alpha + ")"
+              );
+              let check_color = [
+                Math.round(255 * (1 - alpha) + 120 * alpha),
+                Math.round(255 * (1 - alpha) + 154 * alpha)
+              ];
+              check.check.setAttribute(
+                "fill",
+                "rgba(255, " + check_color[0] + "," + check_color[1] + ", 1)"
+              );
+            }
+          });
+          if (now - start_time < 30000 && upward_moving_group.currentY > -710) {
+            requestAnimationFrame(animateLoading);
+          }
+        }
+        /* animateLoading() */
+      });
+    </script>
+
+    <script>
+      particlesJS("particleCanvas-Blue", {
+        particles: {
+          number: {
+            value: 100,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: "#1B5F70"
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000"
+            },
+            polygon: {
+              nb_sides: 3
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100
+            }
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 10,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 10,
+              size_min: 0.1,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 0.5,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "bounce",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 394.57382081613633,
+              rotateY: 157.82952832645452
+            }
+          }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "grab"
+            },
+            onclick: {
+              enable: false,
+              mode: "push"
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 200,
+              line_linked: {
+                opacity: 0.2
+              }
+            },
+            bubble: {
+              distance: 1500,
+              size: 40,
+              duration: 7.272727272727273,
+              opacity: 0.3676323676323676,
+              speed: 3
+            },
+            repulse: {
+              distance: 50,
+              duration: 0.4
+            },
+            push: {
+              particles_nb: 4
+            },
+            remove: {
+              particles_nb: 2
+            }
+          }
+        },
+        retina_detect: true
+      });
+
+      particlesJS("particleCanvas-White", {
+        particles: {
+          number: {
+            value: 250,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: "#ffffff"
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000"
+            },
+            polygon: {
+              nb_sides: 3
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100
+            }
+          },
+          opacity: {
+            value: 0.5,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 0.2,
+              opacity_min: 0,
+              sync: false
+            }
+          },
+          size: {
+            value: 15,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 10,
+              size_min: 0.1,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 0.5,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "bounce",
+            bounce: false,
+            attract: {
+              enable: true,
+              rotateX: 3945.7382081613637,
+              rotateY: 157.82952832645452
+            }
+          }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: false,
+              mode: "grab"
+            },
+            onclick: {
+              enable: false,
+              mode: "push"
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 200,
+              line_linked: {
+                opacity: 0.2
+              }
+            },
+            bubble: {
+              distance: 1500,
+              size: 40,
+              duration: 7.272727272727273,
+              opacity: 0.3676323676323676,
+              speed: 3
+            },
+            repulse: {
+              distance: 50,
+              duration: 0.4
+            },
+            push: {
+              particles_nb: 4
+            },
+            remove: {
+              particles_nb: 2
+            }
+          }
+        },
+        retina_detect: true
+      });
+    </script>
+  </body>
+</html>

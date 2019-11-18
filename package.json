@@ -1,0 +1,33 @@
+{
+  "name": "besnowsure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "i am",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^4.1.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "description": "besnowsure",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feniks212/project_BeSnowSure.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Feniks212/project_BeSnowSure/issues"
+  },
+  "homepage": "https://github.com/Feniks212/project_BeSnowSure#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
