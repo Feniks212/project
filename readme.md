@@ -1,8 +1,4 @@
-# project_BeSnowSure
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://feniks212.github.io/project_BeSnowSure/app/)
-
-See [BeSnowSure - site](https://feniks212.github.io/project_BeSnowSure/app/)
-See MAP [BeSnowSure MAP - site](https://feniks212.github.io/project_BeSnowSure/app/map.html)
+# project
 
 ### Installation
 
@@ -11,7 +7,7 @@ BeSnowSure requires [Node.js](https://nodejs.org/) v4+ to run.
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ cd project_BeSnowSure
+$ cd project
 $ npm install -g gulp
 $ npm install -d
 ```
